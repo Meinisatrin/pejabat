@@ -80,12 +80,6 @@
 	<script src="<?php echo base_url('vendor/datatables-responsive/dataTables.responsive.js') ?>"></script>
 
 	<script>
-	// $(document).ready(function() {
-	// 	$('#dataTables-example').DataTable({
-	// 		responsive: true
-	// 	});
-	// });
-
 	var table = $('#dataTables-example').DataTable({
 			debug: true
 		});
@@ -94,7 +88,7 @@
 
 	</script>
 
-<script>
+	<script>
         $(document).ready(function() {
             $('#dataTables-example').DataTable({
                 "processing": true,

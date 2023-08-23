@@ -33,7 +33,7 @@ class Pejabat extends CI_Controller
        
          //tambah
         $this->load->model('Master_pejabat_model');
-        $data['pejabat_options'] = $this->Master_pejabat_model->get_pejabat_options();
+        // $data['pejabat_options'] = $this->Master_pejabat_model->get_pejabat_options();
         
         $this->load->view('pejabat_master/create', $data);
         }        

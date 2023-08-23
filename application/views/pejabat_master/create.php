@@ -39,9 +39,6 @@
 								<label for="m_pejabat_id">Jabatan:</label>
 								<select id="pejabatSelect" class="js-example-basic-single form-control" name= "m_pejabat_id">
 								<option value="">Pilih Nama Pejabat</option>
-								<?php foreach ($pejabat_options as $pejabat) : ?>
-									<option value="<?php echo $pejabat->id; ?>"><?php echo $pejabat->nama; ?></option>
-								<?php endforeach; ?>
 								</select><br>
 								<br>
 								<button type="submit" class="btn btn-primary btn-sm">Simpan</button>

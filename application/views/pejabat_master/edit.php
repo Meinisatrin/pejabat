@@ -34,11 +34,6 @@
 
 									<label for="m_pejabat_id">Jabatan:</label>
 									<select id="pejabatSelect" class="js-example-basic-single form-control" name="m_pejabat_id">
-										<?php foreach ($pejabat_options as $master_pejabat): ?>
-											<option value="<?= $master_pejabat->id ?>" <?= ($master_pejabat->id == $pejabat->m_pejabat_id) ? 'selected' : '' ?>>
-												<?= $master_pejabat->nama ?>
-											</option>
-										<?php endforeach; ?>
 									</select> </br>
 									<br>
 								<button type="submit" class="btn btn-primary btn-sm">Simpan</button>
@@ -103,6 +98,9 @@
                     },
                     minimumInputLength: 0
                 });
+				// Menambahkan opsi terpilih ke dalam Select2 pada halaman edit
+				var selectedOption = new Option('<?= $pejabat->nama_master ?>', '<?= $pejabat->m_pejabat_id ?>', true, true);
+				$('#pejabatSelect').append(selectedOption).trigger('change');
         });
     </script>
 </script>

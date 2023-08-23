@@ -22,7 +22,12 @@ class Pejabat_model extends CI_Model
 
     public function get_by_id($id)
     {
-        return $this->db->get_where('pejabat', array('id' => $id))->row();
+		$this->db->select('pejabat.*, master_pejabat.nama AS nama_master');
+        $this->db->from('pejabat');
+        $this->db->join('master_pejabat', 'pejabat.m_pejabat_id = master_pejabat.id', 'left');
+		$this->db->where('pejabat.id', $id);
+		$query = $this->db->get();
+        return $query->row();
     }
 
     public function insert($data)
